@@ -16,4 +16,6 @@ public partial class Client
     public string Telephone { get; set; } = null!;
 
     public string Pesel { get; set; } = null!;
+
+    public ICollection<ClientTrip> ClientTrips { get; set; } = new List<ClientTrip>();
 }
