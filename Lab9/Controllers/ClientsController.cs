@@ -7,7 +7,7 @@ namespace Lab9.Controllers;
 [Route("/api/clients")]
 public class ClientsController : ControllerBase
 {
-    private IClientsService _clientsService;
+    private readonly IClientsService _clientsService;
 
     public ClientsController(IClientsService clientsService)
     {
