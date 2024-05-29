@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Lab9.Models;
+﻿namespace Lab9.Models;
 
 public partial class Country
 {
@@ -9,4 +6,5 @@ public partial class Country
 
     public string Name { get; set; } = null!;
 
+    public virtual ICollection<Trip> IdTrips { get; set; } = new List<Trip>();
 }

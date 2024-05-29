@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Lab9.Models;
+﻿namespace Lab9.Models;
 
 public partial class Trip
 {
@@ -17,6 +14,7 @@ public partial class Trip
 
     public int MaxPeople { get; set; }
 
-    public ICollection<Country> Countries { get; set; } = new List<Country>();
-    public ICollection<ClientTrip> ClientTrips { get; set; } = new List<ClientTrip>();
+    public virtual ICollection<ClientTrip> ClientTrips { get; set; } = new List<ClientTrip>();
+
+    public virtual ICollection<Country> IdCountries { get; set; } = new List<Country>();
 }

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Lab9.Models;
+﻿namespace Lab9.Models;
 
 public partial class ClientTrip
 {
@@ -13,6 +10,7 @@ public partial class ClientTrip
 
     public DateTime? PaymentDate { get; set; }
 
-    public Client Client { get; set; }
-    public Trip Trip { get; set; }
+    public virtual Client IdClientNavigation { get; set; } = null!;
+
+    public virtual Trip IdTripNavigation { get; set; } = null!;
 }
